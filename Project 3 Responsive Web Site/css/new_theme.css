@@ -1,0 +1,48 @@
+/* 
+Changes Made:
+Navbar color
+Background color
+Background image
+Text color
+Navbar image changes
+Figure and figcaption change based on theme
+Opening and closing a section plays a sliding animation on new theme
+*/
+
+* {
+    color: white;
+}
+
+body {
+    background-image: url("../img/altBackground.jpg_large");
+}
+
+nav, nav ul, nav ul li button {
+    background-color: #820e0e;
+    color: white;
+}
+
+nav ul li button:hover {
+    background-color: #600302;
+}
+
+main, figure {
+    background-color: #4d2408;
+}
+
+section {
+    background-color: #4d2408;
+}
+
+hr {
+    border-color: #4d2408;
+}
+
+#form button {
+    background-color: #820e0e;
+    border: 1px solid black;
+}
+
+input {
+    color: black;
+}

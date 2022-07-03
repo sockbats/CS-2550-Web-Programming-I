@@ -1,0 +1,266 @@
+/*
+Refactor CSS fix:
+Organized CSS File
+Added documentation
+Changed navbar color
+*/
+
+/* Sets the baseline for the file, allowing those to be changed where needed */
+* {
+    margin: 0px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Sets the main layout for the page based on screen size */
+body {
+    background-image: url("../img/background.webp");
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#center {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "section"
+        "footer";
+    width: 80%;
+    margin: 0 10%;
+}
+
+/* Styling for header and navbar */
+header {
+    grid-area: header;
+    height: 10%;
+}
+
+nav {
+    grid-area: nav;
+    height: 66px;
+    background-color: #f5deb3;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    background-color: #f5deb3;
+}
+
+nav ul li button {
+    background-color: #f5deb3;
+    border: none;
+    text-align: center;
+    display: block;
+    padding: 25.5px 20px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+nav ul li button:hover {
+    background-color: #ebbd68;
+}
+
+#headerImage {
+    padding: .75px 7.5px;
+}
+
+/* Styling for main info on page */
+main {
+    grid-area: main;
+    background-color: #FCF5E5;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main div {
+    width: min(900px, 100%);
+}
+
+figure {
+    padding: 20px;
+    background-color: #FCF5E5;
+    height: 330px;
+}
+
+/* Sets styling for content sections */
+section {
+    display: none;
+    margin-top: 10px;
+    grid-area: section;
+    background-color: #FCF5E5;
+    padding: 20px;
+}
+
+/* Sets styling for weapons section */
+#weapons div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#weapons div div {
+    width: 550px;
+    display: grid;
+    grid-template-areas: 
+    "title image"
+    "description image";
+    margin: 7px 2.5px;
+}
+
+#weapons div div h2 {
+    grid-area: title;
+}
+
+#weapons div div p {
+    grid-area: description;
+    margin-right: 2px;
+}
+
+#weapons div div img {
+    grid-area: image;
+    margin-right: 0px;
+}
+
+/* Sets styling for monsters section */
+#monsters div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#monsters div div {
+    width: 550px;
+    display: grid;
+    grid-template-areas: 
+    "title image"
+    "description image";
+    margin: 7px 2.5px;
+}
+
+#monsters div div h2 {
+    grid-area: title;
+}
+
+#monsters div div p {
+    grid-area: description;
+    margin-right: 2px;
+}
+
+#monsters div div img {
+    grid-area: image;
+    margin-right: 0px;
+}
+
+/* Sets styling for form section */
+#form form ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    padding-left: 0px;
+}
+
+#form li {
+    width: 50%
+}
+
+#form label {
+    font-size: 22px;
+}
+
+#form input, textarea {
+    width: 400px;
+    max-width: 90%;
+    height: 22px;
+    float: right;
+    border: 1px solid black;
+    margin: 5px 20px 5px 5px;
+}
+
+textarea {
+    height: 70px;
+}
+
+#check {
+    flex-direction: column;
+    padding: 0px;
+}
+
+#check li {
+    display: flex;
+    width: auto;
+    align-items: center;
+}
+
+#check input {
+    width: 18px;
+}
+
+#form button {
+    background-color: #013273;
+    color: white;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+} 
+
+.errorMsg {
+    color: red;
+}
+
+.hide {
+    display: none;
+}
+
+#form input:valid {
+    border: 1px solid green;
+}
+
+#form input:invalid {
+    border: 1px solid red;
+}
+
+#thankyou {
+    display: none;
+}
+
+/* Footer Styling, and keeping it at bottom of page */
+
+footer {
+    grid-area: footer;
+    color: white;
+    background-color: #000;
+    margin: 10px 0 0 0;
+    padding: 10px;
+    text-align: center;
+    height: 200px;
+    position: sticky;
+    bottom: -200;
+    width: 98;
+}
+
+@media screen and (max-width: 768px) {
+    #center {
+        display: grid;
+        grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+            "figure"
+            "section"
+            "footer";
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    #form form ul li {
+        width: 100%
+    }
+
+}
